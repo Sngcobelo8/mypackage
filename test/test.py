@@ -1,10 +1,20 @@
-from mypackage import myModule
+from recursion import factorial, fibonacci, reverse, sum_array
+from sorting import bubble_sort, merge_sort, quick_sort
 
-def test_top_n():
+def test_functions():
     """
-    make sure top_n works correctly
+    make sure all functions work correctly
     """
     
-    assert myModule.top_n([8, 3, 2, 7, 4], 3) == [8, 7, 4], 'incorrect'
-    assert myModule.top_n([10, 1, 12, 9, 2], 2) == [12, 10], 'incorrect'
-    assert myModule.top_n([1, 2, 3, 4, 5], 5) == [5, 4, 3, 2, 1], 'incorrect'
+    assert factorial(4) == 24, 'incorrect'
+    assert fibonacci(8) == 21, 'incorrect'
+    assert reverse('A sentence that has to be reversed by the reverse function') == 'noitcnuf esrever eht yb desrever eb ot sah taht ecnetnes A', 'incorrect'
+    assert sum_array([[5, 5], [20], [2, 1]]) == 33, 'incorrect'
+    assert bubble_sort([59, 69,3,58,494,4,13,30]) == [59, 3, 58, 69, 4, 13, 30, 494], 'incorrect'
+
+    #lists to test merge_sort function
+
+    x = [34,5,2,6]
+    y = [12,34,54,1]
+    assert merge_sort(x+y) == [1, 2, 5, 6, 12, 34, 34, 54], 'incorrect' 
+    assert quick_sort([5,6,3,7,11,44]) == [3, 5, 6, 7, 11, 44], 'incorrect'
