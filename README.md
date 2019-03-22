@@ -1,5 +1,5 @@
 # mypackage
-This library was created as an example of how to publish your own python package.
+This library was created for running recursive functions and sorting functions, without having to hard code them yourself.
 
 ## Building this package locally
 python setup.py sdist
